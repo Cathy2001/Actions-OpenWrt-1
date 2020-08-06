@@ -16,3 +16,5 @@ sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 sed -i '$a src-git ad https://github.com/chuansao-258/filters-openwrt' feeds.conf.default 
 svn co https://github.com/Lienol/openwrt/branches/dev-master/package/diy/luci-app-adguardhome package/ad/luci-app-adguardhome
+sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=4.19/g' ./target/linux/x86/Makefile
+sed -i 's/KERNEL_TESTING_PATCHVER:=5.4/KERNEL_TESTING_PATCHVER:=4.19/g' ./target/linux/x86/Makefile
